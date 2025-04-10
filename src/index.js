@@ -2,16 +2,19 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 function Greeting() {
-  return <input type="text" name="" id="" placeholder="Enter your name" />
+  return (
+    <React.Fragment>
+      <Person />
+      <Message />
+    </React.Fragment>
+  )
 }
 
-// function Greeting() {
-//   return React.createElement(
-//     'div',
-//     null,
-//     React.createElement('h2', null, 'My First Component')
-//   )
-// }
+const Person = () => <h2>John Doe</h2>
+
+const Message = () => {
+  return <h2>Hello everyone</h2>
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
